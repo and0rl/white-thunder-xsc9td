@@ -6,15 +6,15 @@ export default function Home() {
     <main className="container">
       <section id="preview">
         <p>
-          In questa pagina potrai trovare gli orari, i giorni d'apertura e i
-          turni di reperibilità pomeridiana e notturna delle farmacie di zona
+          In questa pagina potrai trovare gli orari, i giorni d&apos;apertura e
+          i turni di reperibilità pomeridiana e notturna delle farmacie di zona
           sempre aggiornati.
         </p>
         <h2 style={{ textTransform: "capitalize" }}>{month()}</h2>
         {/* @ts-expect-error Server Component */}
         <Calendar />
         <p>
-          Ti ricordiamo che al di fuori dell'orario di apertura è possibile
+          Ti ricordiamo che al di fuori dell&apos;orario di apertura è possibile
           contattare la farmacia reperibile solo se in possesso di{" "}
           <b>ricetta medica con indicazione di urgenza.</b>
         </p>
