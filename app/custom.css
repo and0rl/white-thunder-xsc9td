@@ -340,7 +340,7 @@ header a + a {
 
 header a,
 a {
-  color: unset;
+  color: var(--h2-color);
 }
 
 address,
@@ -352,4 +352,12 @@ address,
 
 li.farmaList {
   margin-bottom: var(--typography-spacing-vertical);
+}
+
+h2 {
+  text-transform: capitalize;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 0;
+  background-color: #e7efef;
 }
