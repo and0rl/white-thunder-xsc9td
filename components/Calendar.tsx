@@ -1,4 +1,5 @@
 import "./calendar.css";
+import CalendarDay from "./CalendarDay";
 
 export default async function Calendar() {
   interface Week {
@@ -11,24 +12,6 @@ export default async function Calendar() {
 
   const res = await fetch("https://sheetdb.io/api/v1/48uh0odsitulr"); //orlApi
   let week = await res.json();
-
-  const today = new Date().getDate();
-
-  const todayIndex = week.findIndex(
-    (day: Week) => day.daydate === today.toString(),
-  );
-
-  if (todayIndex !== -1 && todayIndex !== 0) {
-    if (new Date().getHours() < 8) {
-      week = week.slice(todayIndex - 1);
-    } else {
-      week = week.slice(todayIndex);
-    }
-  }
-
-  if (todayIndex === -1) {
-    week = week.slice(-1);
-  }
 
   return (
     <div className="calendar">
@@ -49,45 +32,7 @@ export default async function Calendar() {
         </div>
       </div>
       <div className="days">
-        {week.map((day: Week) => {
-          return (
-            <div className="day" key={day.daydate}>
-              <div className="date">
-                <p className="date-num">{day.daydate}</p>
-                <p className="date-day">{day.dayname}</p>
-              </div>
-
-              <div className="events">
-                <div
-                  className={`timeSlot morning ${day.morning.replace(
-                    /[ .]/g,
-                    "",
-                  )}`}
-                >
-                  <p className="title">{day.morning}</p>
-                </div>
-
-                <div
-                  className={`timeSlot evening ${day.evening.replace(
-                    /[ .]/g,
-                    "",
-                  )}`}
-                >
-                  <p className="title">{day.evening}</p>
-                </div>
-
-                <div
-                  className={`timeSlot afterhours ${day.other.replace(
-                    /[ .]/g,
-                    "",
-                  )}`}
-                >
-                  <p className="title">{day.other}</p>
-                </div>
-              </div>
-            </div>
-          );
-        })}
+       <CalendarDay week={week} />
       </div>
     </div>
   );
