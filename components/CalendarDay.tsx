@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 
 interface Week {
   daydate: string;
@@ -12,8 +13,9 @@ type Props = {
   week: Week[];
 };
 
-function sliceWeek(weekToSlice: Week[]) {
-  const today = new Date().getDate();
+/* https://stackoverflow.com/questions/73005663/next-js-new-date-constructor-throwing-console-errors */
+function sliceWeek(weekToSlice: Week[], today) {
+  //const today = new Date().getDate();
   const todayIndex = weekToSlice.findIndex(
     (day: Week) => day.daydate === today.toString(),
   );
@@ -34,47 +36,54 @@ function sliceWeek(weekToSlice: Week[]) {
 }
 
 const CalendarDay = ({ week }: Props) => {
+  const [todayDate, setTodayDate] = useState(null);
+
+  useEffect(() => {
+    setTodayDate(new Date().getDate());
+  }, []);
+
   return (
     <>
-      {sliceWeek(week).map((day: Week) => {
-        return (
-          <div className="day" key={day.daydate}>
-            <div className="date">
-              <p className="date-num">{day.daydate}</p>
-              <p className="date-day">{day.dayname}</p>
+      {todayDate &&
+        sliceWeek(week, todayDate).map((day: Week) => {
+          return (
+            <div className="day" key={day.daydate}>
+              <div className="date">
+                <p className="date-num">{day.daydate}</p>
+                <p className="date-day">{day.dayname}</p>
+              </div>
+
+              <div className="events">
+                <div
+                  className={`timeSlot morning ${day.morning.replace(
+                    /[ .]/g,
+                    "",
+                  )}`}
+                >
+                  <p className="title">{day.morning}</p>
+                </div>
+
+                <div
+                  className={`timeSlot evening ${day.evening.replace(
+                    /[ .]/g,
+                    "",
+                  )}`}
+                >
+                  <p className="title">{day.evening}</p>
+                </div>
+
+                <div
+                  className={`timeSlot afterhours ${day.other.replace(
+                    /[ .]/g,
+                    "",
+                  )}`}
+                >
+                  <p className="title">{day.other}</p>
+                </div>
+              </div>
             </div>
-
-            <div className="events">
-              <div
-                className={`timeSlot morning ${day.morning.replace(
-                  /[ .]/g,
-                  "",
-                )}`}
-              >
-                <p className="title">{day.morning}</p>
-              </div>
-
-              <div
-                className={`timeSlot evening ${day.evening.replace(
-                  /[ .]/g,
-                  "",
-                )}`}
-              >
-                <p className="title">{day.evening}</p>
-              </div>
-
-              <div
-                className={`timeSlot afterhours ${day.other.replace(
-                  /[ .]/g,
-                  "",
-                )}`}
-              >
-                <p className="title">{day.other}</p>
-              </div>
-            </div>
-          </div>
-        );
-      })}
+          );
+        })}
     </>
   );
 };

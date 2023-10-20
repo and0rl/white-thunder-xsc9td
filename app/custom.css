@@ -361,3 +361,13 @@ h2 {
   margin-bottom: 0;
   background-color: #e7efef;
 }
+
+@media (prefers-color-scheme: dark) {
+  h2,
+  p.title,
+  span.Aperti,
+  span.SanLupo,
+  span.SanLorenzoM {
+    color: #0e1a22;
+  }
+}
