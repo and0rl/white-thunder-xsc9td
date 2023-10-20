@@ -14,7 +14,7 @@ type Props = {
 };
 
 /* https://stackoverflow.com/questions/73005663/next-js-new-date-constructor-throwing-console-errors */
-function sliceWeek(weekToSlice: Week[], today) {
+function sliceWeek(weekToSlice: Week[], today: number) {
   //const today = new Date().getDate();
   const todayIndex = weekToSlice.findIndex(
     (day: Week) => day.daydate === today.toString(),
@@ -36,7 +36,7 @@ function sliceWeek(weekToSlice: Week[], today) {
 }
 
 const CalendarDay = ({ week }: Props) => {
-  const [todayDate, setTodayDate] = useState(null);
+  const [todayDate, setTodayDate] = useState<number | null>(null);
 
   useEffect(() => {
     setTodayDate(new Date().getDate());
