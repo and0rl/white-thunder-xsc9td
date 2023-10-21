@@ -1,9 +1,13 @@
 import "./pico.css";
 import "./custom.css";
 
-import { Inter } from "next/font/google";
+import { Raleway } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const raleway = Raleway({
+  weight: "600",
+  /*  style: "normal", */
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Farmacia D'Errico - Guardia Sanframondi",
@@ -18,9 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body /* className={inter.className} */>
+      <body /*  */>
         <header className="container">
-          <h1>&#9882; Farmacia D&apos;Errico</h1>
+          <h1 className={raleway.className}>&#9882; Farmacia D&apos;Errico</h1>
 
           <address>
             Corso Umberto 108, Guardia Sanframondi (BN)

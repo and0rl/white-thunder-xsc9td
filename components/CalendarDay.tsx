@@ -44,6 +44,19 @@ const CalendarDay = ({ week }: Props) => {
 
   return (
     <>
+      {!todayDate &&
+        [...Array(4)].map((el, i) => {
+          return (
+            <div className="day placeholder" key={i}>
+              <div className="date">
+                <p className="date-num"></p>
+                <p className="date-day"></p>
+              </div>
+
+              <div className="events"></div>
+            </div>
+          );
+        })}
       {todayDate &&
         sliceWeek(week, todayDate).map((day: Week) => {
           return (
