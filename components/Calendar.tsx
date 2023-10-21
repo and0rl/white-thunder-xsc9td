@@ -10,7 +10,9 @@ export default async function Calendar() {
     other: string;
   }
 
-  const res = await fetch("https://sheetdb.io/api/v1/48uh0odsitulr"); //orlApi
+  const res = await fetch("https://sheetdb.io/api/v1/48uh0odsitulr", {
+    next: { revalidate: 0 },
+  }); //orlApi
   let week = await res.json();
 
   return (
@@ -32,7 +34,7 @@ export default async function Calendar() {
         </div>
       </div>
       <div className="days">
-       <CalendarDay week={week} />
+        <CalendarDay week={week} />
       </div>
     </div>
   );
