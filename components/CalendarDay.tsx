@@ -15,7 +15,6 @@ type Props = {
 
 /* https://stackoverflow.com/questions/73005663/next-js-new-date-constructor-throwing-console-errors */
 function sliceWeek(weekToSlice: Week[], today: number) {
-  //const today = new Date().getDate();
   const todayIndex = weekToSlice.findIndex(
     (day: Week) => day.daydate === today.toString(),
   );
