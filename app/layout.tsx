@@ -1,5 +1,6 @@
 import "./pico.css";
 import "./custom.css";
+import "../components/calendar.css";
 
 import { Raleway } from "next/font/google";
 
