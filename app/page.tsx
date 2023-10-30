@@ -1,4 +1,4 @@
-import month from "../utils/month";
+import Months from "../components/Months";
 import Calendar from "@/components/Calendar";
 
 export default function Home() {
@@ -10,8 +10,8 @@ export default function Home() {
           i turni di reperibilità pomeridiana e notturna delle farmacie di zona
           sempre aggiornati.
         </p>
-        <h2 style={{ textTransform: "capitalize" }}>{month()}</h2>
-
+        {/*  <h2 style={{ textTransform: "capitalize" }}>{month()}</h2> */}
+        <Months />
         <Calendar />
         <p>
           Ti ricordiamo che al di fuori dell&apos;orario di apertura è possibile

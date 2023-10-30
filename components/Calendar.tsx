@@ -23,7 +23,7 @@ export default async function Calendar() {
         <div className="spacer"></div>
         <div className="time-marker">
           &nbsp;&nbsp;8:30 <br />
-          12:30
+          13:00
         </div>
         <div className="time-marker">
           16:30 <br />
