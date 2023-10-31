@@ -335,10 +335,6 @@ header.container {
   padding-bottom: 0;
 }
 
-header a + a {
-  /* margin-left: 1.5rem; */
-}
-
 header a,
 a {
   color: var(--h2-color);
