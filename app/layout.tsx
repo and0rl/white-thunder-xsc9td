@@ -1,7 +1,3 @@
-import "./pico.css";
-import "./custom.css";
-import "../components/calendar.css";
-
 import { Raleway } from "next/font/google";
 
 const raleway = Raleway({
@@ -9,6 +5,10 @@ const raleway = Raleway({
   /*  style: "normal", */
   subsets: ["latin"],
 });
+
+import "./pico.css";
+import "./custom.css";
+import "../components/calendar.css";
 
 export const metadata = {
   title: "Farmacia D'Errico - Guardia Sanframondi",
