@@ -8,7 +8,7 @@ const raleway = Raleway({
 
 import "./pico.css";
 import "./custom.css";
-import "../components/calendar.css";
+//import "../components/calendar.css";
 
 export const metadata = {
   title: "Farmacia D'Errico - Guardia Sanframondi",
