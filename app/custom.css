@@ -7,7 +7,9 @@
   --border-radius: 0;
   --form-element-spacing-vertical: 1rem;
   --form-element-spacing-horizontal: 1.25rem;
+
   /* da calendar.css */
+
   --numDays: 5;
   --numHours: 3;
   --timeHeight: 60px;
