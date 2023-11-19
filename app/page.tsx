@@ -12,7 +12,6 @@ export default function Home() {
         </p>
         {/*  <h2 style={{ textTransform: "capitalize" }}>{month()}</h2> */}
         <Months />
-        {/* @ts-expect-error Server Component */}
         <Calendar />
         <p>
           Ti ricordiamo che al di fuori dell&apos;orario di apertura è possibile
