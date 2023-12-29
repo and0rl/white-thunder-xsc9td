@@ -28,11 +28,6 @@
   padding-top: var(--spacing);
 }
 
-/* body {
-  background-image: url("../public/christass.webp");
-  background-size: cover;
-} */
-
 @media (prefers-color-scheme: light) {
   body {
     background-image: url("../public/christass.webp");
