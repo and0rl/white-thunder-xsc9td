@@ -24,12 +24,12 @@
   padding-top: var(--spacing);
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   body {
     background-image: url("../public/christass.webp");
     background-size: cover;
   }
-}
+} */
 
 h1,
 h2,
