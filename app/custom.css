@@ -401,7 +401,7 @@ h2 {
 .days {
   display: grid;
   gap: 5px;
-  /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+  /* grid-template-columns:  */
   grid-auto-flow: column;
   grid-auto-columns: 180px;
   overflow: auto;
