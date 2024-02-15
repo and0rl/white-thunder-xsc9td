@@ -520,7 +520,6 @@ h2 {
 }
 .date {
   display: flex;
-  /*  gap: 1em; */
   margin-inline: 0.5rem;
   justify-content: space-evenly;
 }
