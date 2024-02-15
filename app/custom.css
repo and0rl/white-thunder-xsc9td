@@ -1,5 +1,5 @@
 /**
- * Custom theme
+ 
  */
 /* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@800&display=swap"); */
 :root {
@@ -7,7 +7,6 @@
   --border-radius: 0;
   --form-element-spacing-vertical: 1rem;
   --form-element-spacing-horizontal: 1.25rem;
-
   --numDays: 5;
   --numHours: 3;
   --timeHeight: 60px;
