@@ -13,7 +13,7 @@ export default async function Calendar() {
   /* https://sheetdb.io/api/v1/48uh0odsitulr api orl*/
   const res = await fetch("https://sheetdb.io/api/v1/7ncm7jbzsbvad", {
     next: {
-      revalidate: 10, // 10 secondi
+      revalidate: 10, // 10 secondii
     },
   });
   let week = await res.json();
