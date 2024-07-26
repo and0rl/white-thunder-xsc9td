@@ -554,3 +554,9 @@ h2 {
   }
 }
 /* fine calendar.css */
+
+.timeSlot.altre {
+  background: linear-gradient(90deg, rgba(250, 250, 163, 1) 50%, rgba(255, 214, 209, 1) 50%);
+    display: flex;
+    justify-content: space-between;
+}

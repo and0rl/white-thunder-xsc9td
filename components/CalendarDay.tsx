@@ -16,7 +16,7 @@ type Props = {
 /* https://stackoverflow.com/questions/73005663/next-js-new-date-constructor-throwing-console-errors */
 function sliceWeek(weekToSlice: Week[], today: number) {
   const todayIndex = weekToSlice.findIndex(
-    (day: Week) => day.daydate === today.toString(),
+    (day: Week) => day.daydate === today.toString()
   );
 
   if (todayIndex !== -1 && todayIndex !== 0) {
@@ -69,28 +69,40 @@ const CalendarDay = ({ week }: Props) => {
                 <div
                   className={`timeSlot morning ${day.morning.replace(
                     /[ .]/g,
-                    "",
+                    ""
                   )}`}
                 >
-                  <p className="title">{day.morning}</p>
+                  {day.morning === "altre" ? (
+                    <Altre />
+                  ) : (
+                    <p className="title">{day.morning}</p>
+                  )}
                 </div>
 
                 <div
                   className={`timeSlot evening ${day.evening.replace(
                     /[ .]/g,
-                    "",
+                    ""
                   )}`}
                 >
-                  <p className="title">{day.evening}</p>
+                  {day.evening === "altre" ? (
+                    <Altre />
+                  ) : (
+                    <p className="title">{day.evening}</p>
+                  )}
                 </div>
 
                 <div
                   className={`timeSlot afterhours ${day.other.replace(
                     /[ .]/g,
-                    "",
+                    ""
                   )}`}
                 >
-                  <p className="title">{day.other}</p>
+                  {day.other === "altre" ? (
+                    <Altre />
+                  ) : (
+                    <p className="title">{day.other}</p>
+                  )}
                 </div>
               </div>
             </div>
@@ -99,5 +111,14 @@ const CalendarDay = ({ week }: Props) => {
     </>
   );
 };
+
+function Altre() {
+  return (
+    <>
+      <p className="title">SanLupo</p>
+      <p className="title">SanLorM</p>
+    </>
+  );
+}
 
 export default CalendarDay;
