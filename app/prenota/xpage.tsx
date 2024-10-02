@@ -4,8 +4,8 @@ export default function Prenotazioni() {
       <section id="preview">
         <h2>Preview</h2>
         <p>
-          Sed ultricies dolor non ante vulputate hendrerit. Vivamus sit amet
-          suscipit sapien. Nulla iaculis eros a elit pharetra egestas.
+          Sed ultricies plus dolor non ante vulputate hendrerit. Vivamus sit
+          amet suscipit sapien. Nulla iaculis eros a elit pharetra egestas.
         </p>
         <form>
           <div className="grid">
