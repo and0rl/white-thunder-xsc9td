@@ -1,6 +1,6 @@
 "use client";
 export default function Snowfall() {
-  const isNelPeriodoNatalizio = (data) =>
+  const isNelPeriodoNatalizio = (data: Date) =>
     (data.getMonth() === 11 && data.getDate() >= 8) ||
     (data.getMonth() === 0 && data.getDate() <= 6);
 
