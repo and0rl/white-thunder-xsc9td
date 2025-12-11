@@ -8,7 +8,8 @@ const raleway = Raleway({
 
 import "./pico.css";
 import "./custom.css";
-//import "../components/calendar.css";
+import "./snowfall.css";
+import Snowfall from "../components/Snowfall";
 
 export const metadata = {
   title: "Farmacia D'Errico - Guardia Sanframondi",
@@ -45,6 +46,7 @@ export default function RootLayout({
           </a> */}
         </header>
         {children}
+        <Snowfall />
       </body>
     </html>
   );
